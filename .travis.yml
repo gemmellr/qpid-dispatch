@@ -23,8 +23,7 @@ sudo: true
 language: c
 cache: ccache
 env:
-  - PROTON_VERSION=master BUILD_TYPE=Coverage
-  - PROTON_VERSION=0.26.0 BUILD_TYPE=RelWithDebInfo
+  - PROTON_VERSION=0.27.x BUILD_TYPE=RelWithDebInfo
 
 addons:
   apt:
@@ -50,7 +49,7 @@ addons:
 
 install:
 - PREFIX=$PWD/install
-- git clone --depth=10 --branch=$PROTON_VERSION https://github.com/apache/qpid-proton.git
+- git clone --depth=10 --branch=$PROTON_VERSION https://github.com/gemmellr/qpid-proton.git
 
 # Build and install latest proton from source.
 - mkdir qpid-proton/build
