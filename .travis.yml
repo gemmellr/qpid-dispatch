@@ -18,7 +18,6 @@
 #
 
 os: linux
-dist: trusty
 sudo: true
 language: c
 cache: ccache
