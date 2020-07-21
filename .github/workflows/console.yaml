@@ -21,7 +21,6 @@ jobs:
       - name: Run tests
         uses: actions/javascript-action@v1
       - run: cd console/react; npm install
-      - run: cd console/react; npm run build
       - run: cd console/react; npm run test
   eslint:
     name: My eslint job
