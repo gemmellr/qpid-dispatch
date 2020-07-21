@@ -17,7 +17,7 @@ jobs:
     name: My second job
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Run tests
         uses: actions/javascript-action@v1
-#        run: |
-#          yarn test
+        run: npm test
