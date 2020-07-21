@@ -16,3 +16,7 @@ jobs:
   my_second_job:
     name: My second job
     uses: actions/javascript-action@v1
+    steps:
+      - name: Run tests
+        run: |
+          yarn test
