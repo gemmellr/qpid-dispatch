@@ -31,4 +31,4 @@ jobs:
         uses: actions/javascript-action@v1
       - run: cd console/react; npm install
       - run: cd console/react; npm install typescript
-      - run: cd console/react; npx eslint .
+      - run: cd console/react; npx eslint --max-warnings 0 .
