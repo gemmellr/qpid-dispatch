@@ -15,8 +15,9 @@ jobs:
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
   my_second_job:
     name: My second job
-    uses: actions/javascript-action@v1
+    runs-on: ubuntu-latest
     steps:
       - name: Run tests
-        run: |
-          yarn test
+        uses: actions/javascript-action@v1
+#        run: |
+#          yarn test
