@@ -21,8 +21,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.4.1",
     "rhea": "^1.0.20",
-    "topojson-client": "^3.0.1",
-    "typescript": "^3.9.7"
+    "topojson-client": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
