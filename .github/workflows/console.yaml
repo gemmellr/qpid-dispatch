@@ -29,5 +29,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run tests
         uses: actions/javascript-action@v1
+      - run: cd console/react; npm install
       - run: cd console/react; npm install typescript
       - run: cd console/react; npx eslint .
