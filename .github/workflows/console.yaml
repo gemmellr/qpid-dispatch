@@ -2,21 +2,28 @@ on: [push, pull_request]
 
 jobs:
   test:
-    name: npm run test
+    name: Tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run tests
-        uses: actions/javascript-action@v1
-      - run: cd console/react; npm install
-      - run: cd console/react; npm run test
+
+      - name: Install Console
+        run: cd console/react && npm install
+
+      - name: Run Tests
+        run: cd console/react && npm run test
+
   eslint:
-    name: npx eslint --max-warnings 0 .
+    name: ESLint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run tests
-        uses: actions/javascript-action@v1
-      - run: cd console/react; npm install
-      - run: cd console/react; npm install typescript
-      - run: cd console/react; npx eslint --max-warnings 0 .
+
+      - name: Install Console
+        run: cd console/react && npm install
+
+      - name: Install Typescript
+        run: cd console/react && npm install typescript
+
+      - name: Run ESLint
+        run: cd console/react && npx eslint --max-warnings 0 .
