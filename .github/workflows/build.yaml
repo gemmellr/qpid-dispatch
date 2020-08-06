@@ -243,7 +243,7 @@ jobs:
           java-version: 11
 
       - name: RAT Check
-        run: mvn apache-rat:check
+        run: mvn fail-here
 
       - name: Output
         if: ${{ ! cancelled() }}
