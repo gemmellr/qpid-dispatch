@@ -52,7 +52,7 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
-          repository: 'apache/qpid-proton'
+          repository: 'gemmellr/qpid-proton'
           ref: 'master'
           path: 'qpid-proton'
 

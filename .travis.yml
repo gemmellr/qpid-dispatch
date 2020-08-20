@@ -51,11 +51,11 @@ jobs:
   - name: "qdrouterd:Coverage"
     os: linux
     env:
-    - PATH="/usr/bin:$PATH" PROTON_VERSION=0.31.0 BUILD_TYPE=Coverage
+    - PATH="/usr/bin:$PATH" PROTON_VERSION=0.32.0-rc1 BUILD_TYPE=Coverage
   - name: "qdrouterd:RelWithDebInfo+MemoryDebug (gcc on xenial)"
     os: linux
     env:
-    - PATH="/usr/bin:$PATH" PROTON_VERSION=0.31.0 BUILD_TYPE=RelWithDebInfo
+    - PATH="/usr/bin:$PATH" PROTON_VERSION=0.32.0-rc1 BUILD_TYPE=RelWithDebInfo
     - DISPATCH_CMAKE_ARGS='-DRUNTIME_CHECK=asan -DCMAKE_C_FLAGS=-DQD_MEMORY_DEBUG'
   - name: "qdrouterd:RelWithDebInfo+MemoryDebug (clang on focal)"
     os: linux
@@ -75,7 +75,7 @@ jobs:
   - name: "qdrouterd:Default Build"
     os: linux
     env:
-    - PATH="/usr/bin:$PATH" PROTON_VERSION=0.31.0
+    - PATH="/usr/bin:$PATH" PROTON_VERSION=0.32.0-rc1
   - os: osx
     osx_image: xcode11
     env:
@@ -114,7 +114,7 @@ addons:
 install:
 - NPROC=2
 - PREFIX=$PWD/install
-- git clone --depth=10 --branch=$PROTON_VERSION https://github.com/apache/qpid-proton.git
+- git clone --depth=10 --branch=$PROTON_VERSION https://github.com/gemmellr/qpid-proton.git
 - cmake -version
 
 # Build and install proton from source.
