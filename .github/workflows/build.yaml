@@ -66,8 +66,8 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
-          repository: 'apache/qpid-proton'
-          ref: 'main'
+          repository: 'gemmellr/qpid-proton'
+          ref: '0.34.0-rc1'
           path: 'qpid-proton'
 
       - uses: actions/checkout@v2
